@@ -7,7 +7,7 @@ import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [react(), dts({include: 'components/**/*'})],
   build: {
     lib: {
       entry: resolve(__dirname, 'components', 'index.ts'),
